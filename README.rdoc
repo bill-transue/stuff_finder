@@ -1,0 +1,5 @@
+== Stuff Finder
+
+Your place for finding stuff you want and dumping stuff you don't.
+
+This web app was written for demostrating a clean Ruby on Rails app.
