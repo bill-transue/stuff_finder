@@ -1,1 +1,4 @@
-<h1>Classifieds Show</h1>
+<h1><%= @classified.title %></h1>
+<h3><%= @classified.category.name %></h3>
+<div><%= "$#{@classified.price}" %></div>
+<p><%= @classified.description %></p>

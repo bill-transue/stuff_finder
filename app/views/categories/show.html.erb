@@ -1,1 +1,7 @@
-<h1>Categories Show</h1>
+<h1>Classifieds for <%= @category.name %></h1>
+
+<ul>
+  <% @category.classifieds.each do |classified| %>
+    <li><%= link_to classified.title, classified_path(classified), class: 'classified_link' %></li>
+  <% end %>
+</ul>

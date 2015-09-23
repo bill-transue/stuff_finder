@@ -1,1 +1,21 @@
-<h1>Classifieds New</h1>
+<h1>Add Your Classified </h1>
+
+<%= form_for @classified do |classified_form| %>
+  <div>
+    <%= classified_form.label :title %>
+    <%= classified_form.text_field :title %>
+  </div>
+  <div>
+    <%= label_tag :category %>
+    <%= text_field_tag :category %>
+  </div>
+  <div>
+    <%= classified_form.label :description %>
+    <%= classified_form.text_area :description %>
+  </div>
+  <div>
+    <%= classified_form.label :price %>
+    <%= classified_form.number_field :price, step: 0.1 %>
+  </div>
+  <%= classified_form.submit 'Submit' %>
+<% end %>

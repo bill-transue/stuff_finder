@@ -1,1 +1,8 @@
-<h1>Welcome Index</h1>
+<h1>Welcome!</h1>
+<h2>Which Category would you like to look through?</h2>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name, category_path(category) %></li>
+  <% end %>
+</ul>
