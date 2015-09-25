@@ -15,6 +15,9 @@ group :production do
 
   # Required by heroku
   gem 'rails_12factor'
+
+  # Required for paperclip to work in production
+  gem 'aws-sdk', '< 2.0'
 end
 
 # Use SCSS for stylesheets
