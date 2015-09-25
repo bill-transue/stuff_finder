@@ -1,14 +1,11 @@
 class Classified < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
-end
 
-module Animal
-  class Bat
-  end
-end
+  has_attached_file :image, styles: {
+                      medium: "300x300>",
+                      square: "200x200",
+                      thumb: "100x100>" }
 
-module BaseballUtils
-  class Bat
-  end
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
